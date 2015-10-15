@@ -12,6 +12,9 @@
         <link href="<?php echo base_url('assets') ?>/css/jquery.dataTables.min.css" type="text/css" media="screen, projection" rel="stylesheet" />
         <link href="<?php echo base_url('assets') ?>/css/dataTables.bootstrap.css" type="text/css" media="screen, projection" rel="stylesheet" />
         <style>
+            th{
+                vertical-align: middle;
+            }
         </style>
     </head>
     <body>
@@ -28,10 +31,7 @@
                                 <div class="span9">
                                     <ul class="nav nav-tabs pull-right" style="float: right!important;">
                                         <li class="active">
-                                            <a href="<?php echo base_url('antenna/add') ?>"><i class="icon-plus"></i>Add</a>
-                                        </li>
-                                        <li class="active">
-                                            <a href="<?php echo base_url('antenna/upload') ?>"><i class="icon-upload"></i>Upload</a>
+                                            <a href="<?php echo base_url('extract') ?>"><i class="icon-plus"></i>New Process</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -45,17 +45,24 @@
                             <div id="Person-1" class="box">
                                 <div class="box-header">
                                     <i class="icon-signal icon-large"></i>
-                                    <h5>Antenna</h5>
+                                    <h5>RFDS Extractor</h5>
                                 </div>
                                 <div class="box-content box-table">
                                     <table class="table table-hover tablesorter" id="antenna-table">
                                         <thead>
                                             <tr>
-                                                <th>Antenna Model</th>
-                                                <th>Antenna Gain</th>
-                                                <th>Aperture</th>
-                                                <th>Horizontal BW</th>
-                                                <th>Action</th>
+                                                <th rowspan="2">Process Identifier</th>
+                                                <th rowspan="2">Folder Location</th>
+                                                <th colspan="5" style="text-align: center;">Cell Location</th>
+                                                <th rowspan="2">Result</th>
+                                                <th rowspan="2">Action</th>
+                                            </tr>
+                                            <tr>
+                                                <th>Site ID</th>
+                                                <th>RBS Type</th>
+                                                <th>Lat</th>
+                                                <th>Long</th>
+                                                <th>Address</th>
                                             </tr>
                                         </thead>
                                         <tbody >
@@ -125,7 +132,7 @@
                 var oTable = $('#antenna-table').dataTable({
                     "bProcessing": true,
                     "bServerSide": true,
-                    "sAjaxSource": '<?php echo base_url(); ?>antenna/getData',
+                    "sAjaxSource": '<?php echo base_url(); ?>extract/getData',
                     "sPaginationType": "full_numbers",
                     "iDisplayStart ": 20,
                     "oLanguage": {

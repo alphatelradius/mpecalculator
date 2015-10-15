@@ -12,7 +12,7 @@
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="<?php echo base_url('extract') ?>">
                     <i class="icon-tasks icon-large"></i> Extractor
                 </a>
             </li>
