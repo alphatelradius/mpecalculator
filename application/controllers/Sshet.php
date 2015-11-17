@@ -2,15 +2,19 @@
 
 class Sshet extends CI_Controller {
 
+    function index() {
+        echo 'oke';
+    }
+
     function read() {
-        $file = './assets/files/data.xlsx';
-//load the excel library
+        $file = './assets/antenna/antenna.xlsx';
+        //load the excel library
         $this->load->library('excel');
-//read file from path
+        //read file from path
         $objPHPExcel = PHPExcel_IOFactory::load($file);
-//get only the Cell Collection
-        $cell_collection = $objPHPExcel->getActiveSheet('Antenna')->getCellCollection();
-//extract to a PHP readable array format
+        //get only the Cell Collection
+        $cell_collection = $objPHPExcel->getActiveSheet('')->getCellCollection();
+        //extract to a PHP readable array format
         foreach ($cell_collection as $cell) {
             $column = $objPHPExcel->getActiveSheet()->getCell($cell)->getColumn();
             $row = $objPHPExcel->getActiveSheet()->getCell($cell)->getRow();
@@ -35,7 +39,6 @@ class Sshet extends CI_Controller {
                 'hor_bw' => $d['D']
             );
             $this->Modeldb->insert($ins, $table);
-            exit();
         }
     }
 
