@@ -69,21 +69,21 @@
                                                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Market <span class="required">*</span>
                                                 </label>
                                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                                    <input id="market" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" name="market" placeholder="region e.g Philadelhia" type="text" value="<?php echo $site->market ?>">
+                                                    <input id="market" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" name="market" placeholder="region e.g Philadelhia" type="text" value="<?php echo @$site->market ?>">
                                                 </div>
                                             </div>
                                             <div class="item form-group">
                                                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Site ID <span class="required">*</span>
                                                 </label>
                                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                                    <input id="site_id" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" name="site_id" placeholder="" value="<?php echo $site->site_id ?>" type="text">
+                                                    <input id="site_id" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" name="site_id" placeholder="" value="<?php echo @$site->site_id ?>" type="text">
                                                 </div>
                                             </div>
                                             <div class="item form-group">
                                                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Sector <span class="required">*</span>
                                                 </label>
                                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                                    <input id="sector" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" name="sector" placeholder="" type="text" value="<?php echo $site->sector ?>">
+                                                    <input id="sector" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" name="sector" placeholder="" type="text" value="<?php echo @$site->sector ?>">
                                                 </div>
                                             </div>
                                             <div class="item form-group">
@@ -110,14 +110,14 @@
                                                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Antenna Rad. Center <span class="required">*</span>
                                                 </label>
                                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                                    <input id="ant_rad_center" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" name="ant_rad_center"  type="text" value="<?php echo $site->ant_rad_center ?>">
+                                                    <input id="ant_rad_center" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" name="ant_rad_center"  type="text" value="<?php echo @$site->ant_rad_center ?>">
                                                 </div>
                                             </div>
                                             <div class="item form-group">
                                                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Calculation point above ground or roof surface (ft) <span class="required">*</span>
                                                 </label>
                                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                                    <input id="calculation_point_above_ground" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" name="calculation_point_above_ground" type="text" value="<?php echo $site->calculation_point_above_ground ?>">
+                                                    <input id="calculation_point_above_ground" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" name="calculation_point_above_ground" type="text" value="<?php echo @$site->calculation_point_above_ground ?>">
                                                 </div>
                                             </div>
                                             <div class="item form-group">
