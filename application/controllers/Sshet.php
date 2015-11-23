@@ -1,6 +1,6 @@
 <?php
 
-class Sshet extends CI_Controller {
+class Sshet extends MY_Controller {
 
     function index() {
         echo 'oke';

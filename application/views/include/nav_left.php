@@ -7,11 +7,10 @@
         <!-- menu prile quick info -->
         <div class="profile">
             <div class="profile_pic">
-                <img src="<?php echo base_url() ?>assets/images/img.jpg" alt="..." class="img-circle profile_img">
             </div>
             <div class="profile_info">
                 <span>Welcome,</span>
-                <h2>Dewi Ika</h2>
+                <h2><?php echo $this->session->userdata('name'); ?></h2>
             </div>
         </div>
         <!-- /menu prile quick info -->
@@ -35,6 +34,7 @@
                         <ul class="nav child_menu" style="display: none">
                             <li><a href="<?php echo base_url('calculate'); ?>">All MPE</a></li>
                             <li><a href="<?php echo base_url('calculate/add'); ?>">Process Data</a></li>
+                            <li><a href="<?php echo base_url('calculate/multiple'); ?>">Process Multiple Data</a></li>
                         </ul>
                     </li>
                     <li><a href="<?php echo base_url('extract'); ?>"><i class="fa fa-gear"></i> Extractor </a></li>

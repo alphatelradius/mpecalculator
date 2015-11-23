@@ -1,6 +1,6 @@
 <?php
 
-class Antenna extends CI_Controller {
+class Antenna extends MY_Controller {
 
     function __construct() {
         parent::__construct();
@@ -19,8 +19,9 @@ class Antenna extends CI_Controller {
 
     function upload() {
         $data['title'] = "Antenna Data";
-        $this->load->view('antenna/upload', $data);
         $this->session->set_userdata('antenna_identifier', md5(rand(1000, 5000)));
+        $this->load->view('antenna/upload', $data);
+        
     }
 
     function getData() {

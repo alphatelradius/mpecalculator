@@ -1,6 +1,6 @@
 <?php
 
-class Extract extends CI_Controller {
+class Extract extends MY_Controller {
 
     function __construct() {
         parent::__construct();
